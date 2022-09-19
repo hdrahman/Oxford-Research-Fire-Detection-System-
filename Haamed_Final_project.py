@@ -89,7 +89,7 @@ Model_Two = tf.keras.models.Sequential([
 ])
 Call_Back = tf.keras.callbacks.EarlyStopping(monitor="loss",patience=5,mode="min")
 Model_Two.compile(optimizer = 'adam' , loss = 'categorical_crossentropy' , metrics = ['accuracy'])
-ANN_Model = Model_Two.fit(Train_IMG_Set, validation_data=Validation_IMG_Set, callbacks=Call_Back, epochs=1
+ANN_Model = Model_Two.fit(Train_IMG_Set, validation_data=Validation_IMG_Set, callbacks=Call_Back, epochs=16
                         )
 
 
@@ -172,30 +172,19 @@ def open_win(image):
     label = tk.Label(new, image = img).pack()
     new.mainloop()
 
-
-
-#upload image
-
 button1 = tk.Button (root, text='Upload Image', font=("ROG FONTS", 10), bg='green', command = browseFiles)
 canvas.create_window(375, 150, window=button1)
 
-root.mainloop()
 
 
 #insert fireimage
-from PIL import ImageTk, Image
-import os
-cwd_join = os.getcwd() + "\\"
-icon_rel = os.path.relpath('C:\\Users\\Haame\\Documents\\AIIP\\Fire.jpg')
-icon_abs = cwd_join + icon_rel
-p1 = ImageTk.PhotoImage(file=icon_abs + "\\Fire.jpg")
 
-
-frame = Frame(canvas, width=600, height=400)
+frame = Frame(canvas, width=600, height=500)
 frame.pack()
 frame.place(anchor='center', relx=0.5, rely=0.5)
-img = ImageTk.PhotoImage(Image.open("C://Users//Haame//Documents//AIIP//Fire.jpg"))
-label = Label(frame, image = pl).pack()
+#img=ImageTk.PhotoImage(Image.open(filename))
+img = ImageTk.PhotoImage(Image.open("C:\\Users\\Haame\\Documents\\AIIP\\Fire.jpg"))
+label = Label(frame, image = img).pack()
 
 root.mainloop()
 
