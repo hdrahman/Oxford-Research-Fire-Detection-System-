@@ -107,7 +107,7 @@ from tensorflow.keras.preprocessing import image
 
 root= tk.Tk()
 
-#Make a Canvas (i.e, a screen for your project
+#Canvas (Display for the project)
 
 canvas = tk.Canvas(root, width = 750, height = 650)
 canvas.configure(bg='grey19')
