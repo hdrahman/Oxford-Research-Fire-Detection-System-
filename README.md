@@ -1,4 +1,4 @@
-# AIIP Internship Fire Detection System
+# Oxford Research Fire Detection System
 
 A **fire detection machine learning model** that achieves an **85% accuracy**, capable of detecting fire in images. This project integrates both a **machine learning backend** (TensorFlow) and a **simple frontend** using Tkinter to provide a user-friendly interface for image upload and fire detection.
 
